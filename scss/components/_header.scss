@@ -1,0 +1,32 @@
+header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: red;
+    color: white;
+
+    .logo img {
+        max-width: 150px;
+        height: auto;
+    }
+}
+
+.nav-container ul li {
+    margin-left: 20px;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em;
+        padding: 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #555;
+            color: #fff;
+
+        }
+    }
+}

@@ -1,284 +1,146 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: beige;
-}
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: beige; }
 
+.aside-container h2 {
+  font-size: 2em;
+  color: beige;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif; }
 
-/* Estilos para el contenedor del header */
-.header-container {
-    display: flex; /* Flexbox para alinear logo y nav en fila */
-    justify-content: space-between; /* Espaciado entre logo y navegación */
-    align-items: center; /* Centrar verticalmente los elementos */
-    padding: 10px; /* Espaciado interno */
-    background-color: red; /* Color de fondo */
-    color: white; /* Color del texto */
-}
+.aside-container p {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center; }
 
-/* Estilos para el logo */
-.header-container .logo img {
-    max-width: 150px; /* Ajusta el tamaño máximo del logo */
-    height: auto; /* Mantener proporción de la imagen */
-}
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); }
+  .header-container {
+    font-size: 1.5rem; } }
 
-/* Estilos para el contenedor del nav */
-.nav-container ul {
-    list-style: none; /* Eliminar puntos de lista */
-    margin: 0; /* Eliminar márgenes */
-    padding: 0; /* Eliminar padding */
-    display: flex; /* Hacer que los elementos de la lista estén en fila */
-}
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); }
+  .nav-container ul {
+    flex-direction: column; }
+    .nav-container ul li {
+      margin-bottom: 10px; }
+  .header-container h1 {
+    font-size: 1.5rem; }
+  .logo img {
+    max-width: 80px; } }
 
-/* Estilos para los elementos de la lista (li) */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr; }
+  .header-container {
+    flex-direction: column; }
+    .header-container h1 {
+      font-size: 1.2rem; }
+  .nav-container ul {
+    flex-direction: column;
+    align-items: center; }
+  .aside-container {
+    text-align: center; } }
+
+header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: red;
+  color: white; }
+  header-container .logo img {
+    max-width: 150px;
+    height: auto; }
+
 .nav-container ul li {
-    margin-left: 20px; /* Espaciado entre los enlaces */
-}
+  margin-left: 20px; }
+  .nav-container ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; }
+    .nav-container ul li a:hover {
+      background-color: #555;
+      color: #fff; }
 
-/* Estilos para los enlaces de navegación */
-.nav-container ul li a {
-    text-decoration: none; /* Eliminar subrayado de los enlaces */
-    color: white; /* Color del texto de los enlaces */
-    font-size: 1.2em; /* Tamaño del texto */
-    padding: 10px; /* Espaciado interno */
-    border-radius: 4px; /* Bordes redondeados */
-    transition: background-color 0.3s ease; /* Transición suave al hacer hover */
-}
+.main-container h2 {
+  font-size: 2em;
+  color: #950a0a;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif; }
+  .main-container h2 p {
+    font-size: 2em;
+    color: #950a0a;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif; }
 
-/* Efecto hover en los enlaces */
-.nav-container ul li a:hover {
-    background-color: #555; /* Cambia el color de fondo en hover */
-    color: #fff; /* Asegura que el texto siga siendo blanco */
-}
-
-/* Estilos para el main */
-.main-container h2  {
-    font-size: 2em; /* Tamaño del texto */
-    color:rgb(149, 10, 10); /* Color del texto */
-    margin-bottom: 15px; /* Espacio debajo del título */
-    text-align: center; /* Alineación centrada */
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.main-container h2 p { 
-    font-size: 2em; /* Tamaño del texto */
-    color:rgb(149, 10, 10); /* Color del texto */
-    margin-bottom: 15px; /* Espacio debajo del título */
-    text-align: center; /* Alineación centrada */
-    font-family: 'Times New Roman', Times, serif;
-
-}
-
- /* Estilos basicos para grid */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; }
 
 .grid-item {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.grid-item img {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+  .grid-item img {
     width: 100%;
     height: auto;
     max-height: 200px;
     object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.grid-item p {
+    margin-bottom: 10px; }
+  .grid-item p {
     font-size: 16px;
-    color: #333;
-}
+    color: #333; }
 
-/* Estilos básicos para el aside */
-.aside-container {
-    background-color: coral; /* Color de fondo */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-    width: 1250px; /* Ancho del aside */
-    margin: 20px auto; /* Centrando el aside */
-}
-
-/* Estilos para el título */
-.aside-container h2  {
-    font-size: 2em; /* Tamaño del texto */
-    color: beige; /* Color del texto */
-    margin-bottom: 15px; /* Espacio debajo del título */
-    text-align: center; /* Alineación centrada */
-    font-family: 'Times New Roman', Times, serif;
-}
-.aside-container p {
-    font-size: 2em; /* Tamaño del texto */
-    color: #333; /* Color del texto */
-    margin-bottom: 15px; /* Espacio debajo del título */
-    text-align: center; /* Alineación centrada */
-}
-
-/* Estilos para el footer */
 .footer-container {
-    background-color: #333; /* Color de fondo oscuro */
-    color: white; /* Color de texto blanco */
-    padding: 30px; /* Espaciado interno */
-    display: flex; /* Usar flexbox para dividir el contenido en dos columnas */
-    justify-content: space-around; /* Distribuir uniformemente los elementos */
-    align-items: center; /* Alinear verticalmente al centro */
-    flex-wrap: wrap; /* Permitir que los elementos se adapten en pantallas pequeñas */
-}
+  background-color: #333;
+  color: white;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; }
 
-/* Estilos para la sección de redes sociales */
 .social-media {
-    text-align: center;
-}
-
-.social-media h3 {
-    margin-bottom: 15px; /* Espacio debajo del título */
-}
-
-.social-media ul {
-    list-style: none; /* Eliminar viñetas */
+  text-align: center; }
+  .social-media h3 {
+    margin-bottom: 15px; }
+  .social-media ul {
+    list-style: none;
     padding: 0;
-    display: flex; /* Mostrar íconos en fila */
-    justify-content: center; /* Centrar íconos */
-}
+    display: flex;
+    justify-content: center; }
+    .social-media ul li {
+      margin: 0 10px; }
+      .social-media ul li a img {
+        width: 40px;
+        height: auto;
+        transition: transform 0.3s; }
+        .social-media ul li a img:hover {
+          transform: scale(1.2); }
 
-.social-media ul li {
-    margin: 0 10px; /* Espaciado entre íconos */
-}
-
-.social-media ul li a img {
-    width: 40px; /* Tamaño de los íconos */
-    height: auto; /* Mantener proporciones */
-    transition: transform 0.3s; /* Efecto de zoom en hover */
-}
-
-/* Efecto hover en los íconos */
-.social-media ul li a img:hover {
-    transform: scale(1.2); /* Aumentar tamaño en hover */
-}
-
-/* Estilos para la sección de mapa */
 .map {
-    text-align: center;
-}
-
-.map h3 {
-    margin-bottom: 15px; /* Espacio debajo del título */
-}
-
-.map iframe {
-    border: 0; /* Eliminar borde del iframe */
-    border-radius: 10px; /* Bordes redondeados */
-}
-
-/* ofertas semanales*/
-.contenedorofertas {
-    margin: 20px;
-    border: 4px solid grey;
-    border-radius: 10px;
-}
-
-.imgofertas {
-    display: inline-block;
-    width: 10%;
-    height: 10%;
-    margin: 10px;
-    padding:10px;
-    
-
-}
-
-/* formulario */
-form {
-    margin-top: 20px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-input [type="text"], textarea {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: 2px solid beige;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.btnformulario{
-    background-color: white;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    margin: 10px;
-
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
-    }
-
-    .nav-container ul {
-        flex-direction: column; /* Menú en columna para pantallas pequeñas */
-    }
-
-    .nav-container ul li {
-        margin-bottom: 10px;
-    }
-
-    .header-container h1 {
-        font-size: 1.5rem;
-    }
-
-    .logo img {
-        max-width: 80px; /* Logo más pequeño en pantallas pequeñas */
-    }
-}
-
-@media (max-width: 480px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* 1 columna para móviles */
-    }
-
-    .header-container {
-        flex-direction: column;
-    }
-
-    .header-container h1 {
-        font-size: 1.2rem;
-    }
-
-    .nav-container ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .aside-container {
-        text-align: center;
-    }
-}
-
-
-
+  text-align: center; }
+  .map h3 {
+    margin-bottom: 15px; }
+  .map iframe {
+    border: 0;
+    border-radius: 10px; }
