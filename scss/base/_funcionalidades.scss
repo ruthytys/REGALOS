@@ -1,0 +1,82 @@
+//* VARIABLES
+$color-principal:black;
+$color-secundario: aqua;
+
+
+//* LISTAS
+$colores: red, green, blue;
+$font: 20px, 25px, 30px, 42px;
+
+
+
+//* OPERACIONES
+//* + - */
+$ancho: 750px;
+
+//* MAPAS
+$boton: (
+    //* key - value
+    background-color:black,
+    borde-boton: 2px solid blue,
+    color-text:white,
+
+);
+
+//* EXTENDS
+%enlaces{
+    text-decoration: none;
+    color: black;
+}
+
+.header-container{
+    background-color: aqua;
+    border: solid 1px black;
+    @extend %enlaces;
+}
+
+//* MIXIN
+@mixin flex($flex, $justify, $align){
+    display: $flex;
+    justify-content:$justify ;
+    align-items: $align;
+}
+
+.grid-container{
+    @include flex( flex, space-around, center)
+}
+
+.grid-container{
+    @include flex(flex, center, center)
+
+}
+
+//* CONDICIONALES
+//* = ASIGNACION
+//* == SON IGUALES
+//* ===EXACTAMENTEN IGUALES
+// != DIFERENTE
+// > MAYOR QUE
+// < MENOR QUE
+// >= MAYOR O IGUAL
+// <= MENOR O IGUAL 
+
+
+
+    @mixin modos($modo) {
+        @if $modo == black{
+            border: solid 2px burlywood;
+        }@else {
+            border: solid 2px red;
+        }
+
+    }
+
+    .bg-elemento{
+        @include modos ( black);
+
+    }
+    
+
+
+
+

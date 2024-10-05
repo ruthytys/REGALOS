@@ -3,8 +3,8 @@ header-container {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: red;
-    color: white;
+    background-color: $color-principal;
+    color: $color-secundario;
 
     .logo img {
         max-width: 150px;
@@ -18,14 +18,14 @@ header-container {
     a {
         text-decoration: none;
         color: white;
-        font-size: 1.2em;
+        font-size: 25px;
         padding: 10px;
         border-radius: 4px;
         transition: background-color 0.3s ease;
 
         &:hover {
             background-color: #555;
-            color: #fff;
+            color: $color-principal;
 
         }
     }

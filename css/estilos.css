@@ -1,3 +1,24 @@
+.header-container {
+  text-decoration: none;
+  color: black; }
+
+.header-container {
+  background-color: aqua;
+  border: solid 1px black; }
+
+.grid-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.bg-elemento {
+  border: solid 2px burlywood; }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -57,8 +78,8 @@ header-container {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: red;
-  color: white; }
+  background-color: black;
+  color: aqua; }
   header-container .logo img {
     max-width: 150px;
     height: auto; }
@@ -68,13 +89,13 @@ header-container {
   .nav-container ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1.2em;
+    font-size: 25px;
     padding: 10px;
     border-radius: 4px;
     transition: background-color 0.3s ease; }
     .nav-container ul li a:hover {
       background-color: #555;
-      color: #fff; }
+      color: black; }
 
 .main-container h2 {
   font-size: 2em;
